@@ -1,11 +1,14 @@
-/* Main */ /* TODO: Розділити на різні файли та підвантажувати за допомогою JS */
+/* Main */
 body {
     margin: 0;
     padding: 0;
     min-width: 500px;
+    background: #111;
 }
-/* Header */
-.header {
+.console {
+    background: white;
+}
+#header {
     position: fixed;
     display: flex;
     width: 100%;
@@ -13,195 +16,27 @@ body {
     padding: 10px 0;
     height: 40px;
     background: gold;
-    border-top: 3px solid black;
-    border-bottom: 3px solid black;
+    border-bottom: 2px solid darkgray;
 }
-.header .header-tab {
-    cursor: pointer;
+#header .header-tab {
+}
+
+#header #logo img {
+    border-radius: 50%;
+    width: 40px;
 }
 .header-icon {
     width: 40px;
+    cursor: pointer;
 }
 
 /* Content */
-.content {
+#content {
     padding-top: 80px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
-.slider {
-    display: flex;
-    border-radius: 10px;
-    gap: 10px;
-    margin: 0 40px;
-    overflow: auto;
-    white-space: nowrap;
-}
-.slider img {
-    min-width: 350px;
-    width: 350px;
-}
-.photo-session-types, .photo-zones {
-    display: flex;
-    flex-direction: column;
-    margin: 50px 20px 0 20px;
-    justify-content: center;
-}
-.content-zone-title {
-    align-self: center;
-    font-size: 40px;
-}
-.photo-session-container {
-    display: flex;
-    justify-content: space-around;
-    margin: 20px;
-}
-.photo-zones-container {
-    display: flex;
-    justify-content: space-around;
-    margin: 20px;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-.photo-session-block {
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    border-radius: 10px;
-    padding: 50px;
-    width: 20%;
-    text-align: center;
-}
-.photo-zone-block {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    margin-bottom: 20px;
-    min-width: 30%;
-    align-items: center;
-}
-.photo-session-types img {
-    width: 100px;
-    align-self: center;
-    margin-bottom: 20px;
-}
-.photo-zones img {
-    width: 300px;
-    height: 175px;
-    border-radius: 10px;
-    margin-bottom: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-.calendar {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.calendar iframe {
-    margin-top: 5px;
-    width: 92%;
-}
-
-.google-map {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
-}
-.google-map iframe {
-    margin-top: 5px;
-    width: 92%;
-}
-
-.studio-rent {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
-}
-.studio-rent .studio-rent-form {
-    width: 92%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px;
-}
-.studio-rent-form-cont {
-    display: flex;
-    justify-content: center;
-}
-.studio-rent-form input {
-    margin: 5px;
-    width: 500px;
-}
-.studio-rent-form-fields {
-    display: flex;
-    flex-direction: column;
-}
-.studio-rent-form button {
-}
-
-/* Popup */
-.popup {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-.popup .popup-header {
-    border-radius: 10px 10px 0 0;
-    padding: 15px;
-    display: flex;
-    background: gold;
-}
-
-.popup .popup-title {
-    font-size: 28px;
-    font-weight: bold;
-}
-.popup-content {
-    background-color: #fefefe;
-    margin: 15% auto;
-    border: 1px solid #888;
-    border-radius: 10px;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-}
-.popup-form {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-.popup-form label {
-    font-size: 20px;
-}
-.popup-content button {
-    margin: 10px;
-    align-self: end;
-}
-
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    margin-left: auto;
-}
-
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
+    min-height: 70vh;
 }
 
 input {
@@ -218,4 +53,12 @@ button {
     border-radius: 10px;
     cursor: pointer;
     width: fit-content;
+}
+
+footer {
+    color: mistyrose;
+    background: #111;
+    padding: 20px;
+    border-top: 2px solid darkgray;
+    margin-top: 10px;
 }

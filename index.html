@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <title>Фотостудія</title>
     <link rel="stylesheet" href="/styles/main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
-<div class="console"> <!-- TODO: Розділити на різні файли та підвантажувати за допомогою JS -->
-    <div class="header">
+<div class="console">
+    <div id="header">
         <div id="logo" class="header-tab">
-            <img class="header-icon" src="#" alt="Логотип"> <!-- TODO: Додати логотип -->
+            <img class="header-icon" src="/resources/icons/logo.png" alt="Логотип">
         </div>
         <div id="main-tab" class="header-tab">
             <img class="header-icon" src="/resources/icons/header_icons/icon-home.png" alt="Головна">
@@ -33,112 +34,13 @@
             <img src="#" alt="Контакти"> <!-- TODO: Додати контакти -->
         </div>
     </div>
-    <div class="content">
-        <div class="slider"> <!-- TODO: змінити на слайдер -->
-            <img src="https://media.istockphoto.com/id/636300362/photo/happy-young-family-with-two-small-children.jpg?s=612x612&w=0&k=20&c=UGmVKd1Kb02l7BbsPQ2WnoMh5IeFtlEZOdsd2vur-ns="
-                 alt="">
-            <img src="https://media.gettyimages.com/id/636300476/photo/happy-young-family-at-home.jpg?s=612x612&w=gi&k=20&c=8nIqL4IAxUyDLfImhEsUcO8t7w-AQoklTDul1fwTUcI="
-                 alt="">
-            <img src="https://t3.ftcdn.net/jpg/03/72/46/74/360_F_372467408_1YnrDbd4FBftKhdBOZDl9U9Qq4u0bzST.jpg" alt="">
-            <img src="https://t3.ftcdn.net/jpg/03/72/46/74/360_F_372467408_1YnrDbd4FBftKhdBOZDl9U9Qq4u0bzST.jpg" alt="">
-            <img src="https://t3.ftcdn.net/jpg/03/72/46/74/360_F_372467408_1YnrDbd4FBftKhdBOZDl9U9Qq4u0bzST.jpg" alt="">
-        </div>
-        <div class="photo-session-types"> <!-- TODO: Додати анімації і курсор -->
-            <div class="photo-session-title content-zone-title">Типи фотосесій</div>
-            <div class="photo-session-container">
-                <div class="photo-session-block">
-                    <img src="/resources/icons/photo_sessions_icons/icon-baby-boy.png" alt="">
-                    В очікуванні дива
-                </div>
-                <div class="photo-session-block">
-                    <img src="/resources/icons/photo_sessions_icons/icon-family.png" alt="">
-                    Сімейна дитяча
-                </div>
-                <div class="photo-session-block">
-                    <img src="/resources/icons/photo_sessions_icons/icon-certificate.png" alt="">
-                    Подарунковий сертифікат
-                </div>
-            </div>
-        </div>
-        <div class="photo-zones"> <!-- TODO: Додати анімації і курсор -->
-            <div class="photo-zones-title content-zone-title">Фотозони</div>
-            <div class="photo-zones-container">
-                <div class="photo-zone-block">
-                    <img src="/resources/pictures/interiors/interior.png" alt="">
-                    Інтер'єр 1
-                </div>
-                <div class="photo-zone-block">
-                    <img src="/resources/pictures/interiors/interior-2.png" alt="">
-                    Інтер'єр 2
-                </div>
-                <div class="photo-zone-block">
-                    <img src="/resources/pictures/interiors/interior-3.png" alt="">
-                    Інтер'єр 3
-                </div>
-                <div class="photo-zone-block">
-                    <img src="/resources/pictures/interiors/interior-4.png" alt="">
-                    Інтер'єр 4
-                </div>
-                <div class="photo-zone-block">
-                    <img src="/resources/pictures/interiors/interior-5.png" alt="">
-                    Інтер'єр 5
-                </div>
-                <div class="photo-zone-block">
-                    <img src="/resources/pictures/interiors/interior-6.png" alt="">
-                    Інтер'єр 6
-                </div>
-            </div>
-        </div>
-        <div class="calendar">
-            <div class="calendar-title content-zone-title">Розклад</div> <!-- TODO: стилізувати -->
-            <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23F6BF26&ctz=Europe%2FKiev&mode=WEEK&showTitle=0&showPrint=0&showCalendars=0&src=YmxhemtvdjI1M0BnbWFpbC5jb20&color=%23039BE5"
-                    style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
-        </div>
-        <div class="google-map">
-            <div class="google-map-title content-zone-title">Розташування</div>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1083.3478191216893!2d26.981291822454676!3d49.43035290521395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473207b8dc62b351%3A0x56073b51f507437a!2z0KXQvNC10LvRjNC90LjRhtGM0LrQuNC5INC60L7QvtC_0LXRgNCw0YLQuNCy0L3QuNC5INGC0L7RgNCz0L7QstC10LvRjNC90L4t0LXQutC-0L3QvtC80ZbRh9C90LjQuSDRltC90YHRgtC40YLRg9GC!5e0!3m2!1suk!2sua!4v1706984408932!5m2!1suk!2sua"
-                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-        <div class="studio-rent">
-            <div class="studio-rent-title content-zone-title">Оренда фотостудії</div>
-            <div class="studio-rent-form">
-                <div class="studio-rent-form-cont">
-                    <div class="studio-rent-form-fields">
-                        <input type="text" placeholder="Введіть ім'я (обов'язково)">
-                        <input type="text" placeholder="Введіть номер телефону (обов'язково)">
-                        <input type="email" placeholder="Введіть електронну пошту (обов'язково)">
-                    </div>
-                </div>
-                <!-- TODO: додати вибір послуги -->
-                <button>Відправити заявку</button>
-            </div>
-        </div>
+    <div id="content">
     </div>
-</div>
 
-<!-- Popups -->
-<div id="call-me-popup" class="popup">
-    <div class="popup-content">
-        <div class="popup-header">
-            <div class="popup-title">Заповніть форму</div>
-            <span class="close">&times</span>
-        </div>
-        <div class="popup-form">
-            <label> Ім'я
-                <input type="text" id="js-full-name">
-            </label>
-            <label> Номер телефону
-                <input type="text" id="js-phone-number">
-            </label>
-            <label> Електронна пошта
-                <input type="email" id="js-email">
-            </label>
-        </div>
-        <button onclick="register()">Готово</button>
-    </div>
+    <footer>
+        <p>&copy; 2024 KidsPhotoStudio. All rights reserved.</p>
+    </footer>
 </div>
-<!-- TODO: Додати футер -->
 <script src="/scripts/main.js"></script>
 </body>
 </html>
