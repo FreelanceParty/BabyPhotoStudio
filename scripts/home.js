@@ -1,4 +1,5 @@
 $(document).ready( function () {
+    // PHOTO-ZONE
     const
         $photoZone = $('.photo-zones'),
         $photoZonePopup = $photoZone.find('#photo-zone-popup'),
@@ -29,6 +30,19 @@ $(document).ready( function () {
     $(window).on('click', function (event) {
         if (event.target === $photoZonePopup[0]) {
             $photoZonePopup[0].style.display = "none";
+        } else if (event.target === $studioRentPopup[0]) {
+            $studioRentPopup[0].style.display = "none";
         }
+    });
+
+    // STUDIO RENT
+    const
+        $studioRent = $('.studio-rent'),
+        $studioRentBtn = $studioRent.find('.js-studio-rent-btn'),
+        $studioRentPopup = $studioRent.find('#rent-popup')
+    ;
+
+    $studioRentBtn.on('click', function () {
+        $studioRentPopup[0].style.display = "block";
     });
 });
