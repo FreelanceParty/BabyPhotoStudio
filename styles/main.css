@@ -29,6 +29,12 @@ body {
     width: 40px;
     cursor: pointer;
 }
+#contact-href img{
+    border-radius: 11px;
+}
+#contact-href a:link {
+  text-decoration: none;
+}
 
 /* Content */
 #content {

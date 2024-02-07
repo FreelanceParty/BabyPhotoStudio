@@ -1,1 +1,13 @@
-
+#prices-table{
+    display: flex;
+    justify-content: center;
+}
+#head-row{
+    background: gold;
+}
+.prices-rows{
+    background: rgba(20,22,17,0.31);
+}
+.prices-column{
+    background: goldenrod;
+}
