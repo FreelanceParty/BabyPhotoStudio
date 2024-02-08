@@ -6,26 +6,31 @@
     overflow: auto;
     white-space: nowrap;
 }
+
 .slider img {
     min-width: 350px;
     width: 350px;
 }
+
 .photo-session-types, .photo-zones {
     display: flex;
     flex-direction: column;
     margin: 50px 20px 0 20px;
     justify-content: center;
 }
+
 .content-zone-title {
     align-self: center;
     font-size: 40px;
 }
+
 .photo-session-container {
     display: flex;
     justify-content: space-around;
     gap: 10px;
     margin: 20px;
 }
+
 .photo-zones-container {
     display: flex;
     justify-content: space-around;
@@ -33,6 +38,7 @@
     flex-wrap: wrap;
     gap: 20px;
 }
+
 .photo-session-block {
     display: flex;
     flex-direction: column;
@@ -43,6 +49,7 @@
     text-align: center;
     cursor: pointer;
 }
+
 .photo-zone-block {
     display: flex;
     flex-direction: column;
@@ -52,11 +59,13 @@
     align-items: center;
     cursor: pointer;
 }
+
 .photo-session-types img {
     width: 100px;
     align-self: center;
     margin-bottom: 20px;
 }
+
 .photo-zones-container img {
     width: 200px;
     height: 300px;
@@ -64,11 +73,13 @@
     margin-bottom: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
 .calendar {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 .calendar iframe {
     margin-top: 5px;
     width: 92%;
@@ -80,6 +91,7 @@
     align-items: center;
     margin-top: 20px;
 }
+
 .google-map iframe {
     margin-top: 5px;
     width: 92%;
@@ -91,6 +103,7 @@
     align-items: center;
     margin-top: 20px;
 }
+
 .studio-rent .studio-rent-form {
     width: 92%;
     display: flex;
@@ -98,42 +111,46 @@
     align-items: center;
     margin-bottom: 20px;
 }
+
 .studio-rent-form-cont {
     display: flex;
     justify-content: center;
 }
+
 .studio-rent-form input {
     margin: 5px;
     width: 500px;
 }
+
 .studio-rent-form-fields {
     display: flex;
     flex-direction: column;
 }
+
 .studio-rent-form button {
 }
 
 .popup {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    display: none;
+    position: fixed;
+    z-index: 1;
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100vh; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
-.popup-container {
+.popup-container { /* TODO: зробити усі попапи під один стиль */
     border-radius: 10px;
     background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
+    margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
     width: 60%;
-    min-width: 60%; /* Could be more or less, depending on screen size */
+    min-width: 60%;
 }
 
 .close {
@@ -156,7 +173,6 @@
     margin-left: auto;
 }
 
-
 .popup-subcontainer {
     display: flex;
     padding: 0 10px;
@@ -172,6 +188,7 @@
     position: relative;
     flex-basis: 75%;
 }
+
 .expand-container img {
     width: 100%;
     height: 100%;
@@ -185,7 +202,35 @@
     overflow-x: hidden;
     gap: 20px;
 }
+
 .secondary-photos img {
     width: 100%;
     height: 100%;
+}
+
+/*Pop-up*/
+.rent-popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rent-popup:hover + .popup {
+    display: block;
+}
+
+#rent-popup .popup-text {
+    text-align: center;
+}
+
+#rent-popup .popup-close {
+    width: fit-content;
+    cursor: pointer;
+    font-size: 20px;
+    color: darkred;
+}
+
+#rent-popup .popup-header {
+    display: flex;
+    justify-content: end;
 }
