@@ -17,6 +17,7 @@ body {
     height: 40px;
     background: gold;
     border-bottom: 2px solid darkgray;
+    z-index: 2;
 }
 #header .header-tab {
 }
@@ -31,6 +32,7 @@ body {
 }
 #contact-href img{
     border-radius: 11px;
+    scale: .8;
 }
 #contact-href a:link {
   text-decoration: none;
