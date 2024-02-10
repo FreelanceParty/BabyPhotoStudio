@@ -1,0 +1,67 @@
+<link rel="stylesheet" href="/styles/tabs/photo-sessions.css">
+
+<div class="details-container">
+    <div class="details-header">
+    </div>
+    <div class="details-content">
+        <div class="photo-zone">
+            <div class="main-photo">
+            </div>
+            <div class="secondary-photos">
+                <div id="secondary-photo-1" class="photo">
+                </div>
+                <div id="secondary-photo-2" class="photo">
+                </div>
+                <div id="secondary-photo-3" class="photo">
+                </div>
+                <div id="secondary-photo-4" class="photo">
+                </div>
+            </div>
+        </div>
+        <div class="desctiption">
+            <div class="text">
+            </div>
+            <div class="price">
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            const
+                id = JSON.parse(localStorage.getItem('myData')).block_id,
+                $details = $('.details-container'),
+                $header = $details.find('.details-header'),
+                $mainPhoto = $details.find('.main-photo'),
+                $prices = $details.find('.price'),
+                $description = $details.find('.description'),
+                text = {
+                    '1': 'В очікуванні дива',
+                    '2': 'Сімейна дитяча',
+                    '3': 'Подарунковий сертифікат',
+                },
+                prices = {
+                    '1': '1500$',
+                    '2': '4500$',
+                    '3': '5500$',
+                },
+                description = {
+                    '1': 'Description 1',
+                    '2': 'Description 2',
+                    '3': 'Description 3',
+                },
+                mainPhoto = `<img src="/resources/pictures/photo_sessions_photos/main/main-${id}.png">`
+            ;
+            $header.html(text[id]);
+            $prices.html(prices[id]);
+            $description.html(description[id]);
+            $mainPhoto.html(mainPhoto);
+            for (let i = 1; i <= 4; i++) {
+                const
+                    $secondaryPhoto = $details.find(`#secondary-photo-${i}`),
+                    secondaryPhoto = `<img src="/resources/pictures/photo_sessions_photos/secondary/secondary-${id}-${i}.png">`
+                ;
+                $secondaryPhoto.html(secondaryPhoto)
+            }
+        });
+    </script>
+</div>

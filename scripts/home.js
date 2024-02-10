@@ -1,4 +1,4 @@
-$(document).ready( function () {
+$(document).ready(function () {
     // INTERIOR
     const
         $interiors = $('.interiors'),
@@ -44,5 +44,20 @@ $(document).ready( function () {
 
     $studioRentBtn.on('click', function () {
         $studioRentPopup[0].style.display = "block";
+    });
+
+    // PHOTO-SESSIONS
+    const
+        $photoSessionTypesBlock = $('.photo-session-types'),
+        $photoSessionBlocks = $photoSessionTypesBlock.find('.photo-session-block'),
+        $content = $('#content')
+    ;
+    $photoSessionBlocks.on('click', function () {
+        var dataToSend = {
+            block_id: $(this).attr('value'),
+        };
+        localStorage.setItem('myData', JSON.stringify(dataToSend));
+        $content.load('/views/content/photo-sessions/details.html');
+
     });
 });
