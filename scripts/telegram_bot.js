@@ -1,5 +1,5 @@
 // npm i telegraf express body-parser cors
-const { Telegraf } = require('telegraf')
+const {Telegraf} = require('telegraf')
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
@@ -13,7 +13,13 @@ app.use(bodyParser.json());
 app.use(cors());
 app.post('/sendMessage', (req, res) => {
     reqData = req.body.data;
-    message = `📝НОВА ЗАЯВКА📝\n\n🪪Ім'я: ${reqData.name}\n☎️Номер телефону: ${reqData.phone_number}\n💌Пошта: ${reqData.email}`;
+    service = reqData.photo_session === undefined ? '' : reqData.photo_session
+    message = `📝НОВА ЗАЯВКА📝\n\n🪪Ім'я: ${reqData.name}\n
+                ☎️Номер телефону: ${reqData.phone_number}\n
+                💌Пошта: ${reqData.email}\n
+                🔑Послуга: ${service}\n
+                💬Коментар: ${reqData.comment}`
+    ;
     bot.telegram.sendMessage(USER_ID, message);
     res.status(200).send('Message sent successfully');
 });

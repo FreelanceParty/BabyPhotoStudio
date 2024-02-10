@@ -1,7 +1,7 @@
 .photo-session-types, .interiors {
     display: flex;
     flex-direction: column;
-    margin: 50px 20px 0 20px;
+    margin: 20px 20px 0 20px;
     justify-content: center;
 }
 
@@ -114,7 +114,6 @@
 }
 
 .studio-rent .studio-rent-form {
-    width: 92%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -123,7 +122,8 @@
 
 .studio-rent-form-cont {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    gap: 20px;
 }
 
 .studio-rent-form input {
@@ -134,6 +134,7 @@
 .studio-rent-form-fields {
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
 }
 
 .popup {
@@ -215,52 +216,66 @@
 }
 
 /* RENT */
-.radio-checkbox{
-    width: 50vh;
+.radio-checkbox {
     height: 150px;
     display: flex;
     flex-direction: column;
-    justify-content: left;
-    margin-bottom: 10px;
-    margin-top: 10px;
+    justify-content: space-around;
 }
-.radio-checkbox label{
-    color: #777777;
-    width: 180px;
+.radio-circles-cont {
+    display: flex;
+    justify-content: center;
+}
+
+.radio-checkbox label {
+    width: 200px;
     font-size: 20px;
-    border: black solid 2px;
+    border: #777 solid 2px;
     border-radius: 5px;
-    margin-bottom: 20px;
     white-space: nowrap;
     text-align: center;
 }
-.radio-checkbox label:hover{
+
+.radio-checkbox label:hover {
     color: black;
 }
-input[type = radio].radio-circles{
+
+input[type = radio].radio-circles {
     display: none;
 }
-input[type = radio].radio-circles:checked+label{
-    background: greenyellow;
+
+input[type = radio].radio-circles:checked + label {
+    background: gold;
     border-radius: 5px;
     font-weight: bold;
 }
-.radio-circles-cont{
-    width: 300px;
+input[type = radio].radio-circles:hover + label {
+    background: yellow;
+    cursor: pointer;
+}
+
+.radio-circles-cont {
     display: flex;
     justify-content: center;
 }
-#text-radio{
+
+#text-radio {
     display: flex;
     justify-content: center;
 }
-#comment{
-    height: 75px;
-    text-align: left;
-    margin-bottom: 10px;
+
+textarea {
+    width: 500px;
+    height: 150px;
+    padding: 6px 10px;
+    margin-bottom: 5px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 18px;
+    resize: none;
 }
-
-
 
 /*Pop-up*/
 .rent-popup {
@@ -290,7 +305,7 @@ input[type = radio].radio-circles:checked+label{
 }
 
 .container {
-    padding: 2rem;
+    padding: 1.8rem;
     margin-top: 2.5rem;
 }
 

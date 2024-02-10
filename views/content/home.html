@@ -31,7 +31,7 @@
         </div>
     </div>
 </div>
-<div class="interiors"> <!-- TODO: Додати анімації -->
+<div class="interiors">
     <div class="interiors-title content-zone-title">Фотозони</div>
     <div class="interiors-container">
         <div class="interior-block">
@@ -106,21 +106,21 @@
             </div>
             <div class="radio-checkbox">
                 <div class="radio-circles-cont">
-                    <input class="radio-circles" type="radio" id="answer1" name="serf-type" value="answer1">
-                    <label class="radio-label" for="answer1">Подарнуковий</label>
+                    <input class="radio-circles" type="radio" id="answer1" name="serf-type" value="certificate">
+                    <label class="radio-label" for="answer1">Сертифікат</label>
                 </div>
                 <div class="radio-circles-cont">
-                    <input class="radio-circles" type="radio" id="answer2" name="serf-type" value="answer2">
+                    <input class="radio-circles" type="radio" id="answer2" name="serf-type" value="family">
                     <label class="radio-label" for="answer2">Сімейна дитяча</label>
                 </div>
                 <div class="radio-circles-cont">
-                    <input class="radio-circles" type="radio" id="answer3" name="serf-type" value="answer3">
+                    <input class="radio-circles" type="radio" id="answer3" name="serf-type" value="baby">
                     <label class="radio-label" for="answer3">В очікувані дива</label>
                 </div>
             </div>
         </div>
         <div class="studio-rent-form-fields">
-            <input id="comment" type="text" placeholder="Додаткові побажання">
+            <textarea placeholder="Тут ви можете залишити свій коментар :)" id="comment"></textarea>
         </div>
         <button class="js-studio-rent-btn" onclick="sendMessage()">Відправити заявку</button>
         <script>
@@ -128,7 +128,9 @@
                 const data = {
                     name: $('.js-full-name').val(),
                     phone_number: $('.js-phone-number').val(),
-                    email: $('.js-email').val()
+                    email: $('.js-email').val(),
+                    photo_session: $('.radio-circles:checked').val(),
+                    comment: $('#comment').val()
                 };
 
                 fetch('http://localhost:3000/sendMessage', {
@@ -149,7 +151,7 @@
     <div id="rent-popup" class="popup"> <!-- TODO: змінити попап -->
         <div class="popup-container">
             <div class="popup-header">
-                <span class="popup-close">&times;</span>
+                <span class="close">&times;</span>
             </div>
             <div class="popup-content">
                 <p class="popup-text">Дякуємо за заявку❤️</p>

@@ -39,11 +39,15 @@ $(document).ready(function () {
     const
         $studioRent = $('.studio-rent'),
         $studioRentBtn = $studioRent.find('.js-studio-rent-btn'),
-        $studioRentPopup = $studioRent.find('#rent-popup')
+        $studioRentPopup = $studioRent.find('#rent-popup'),
+        $studioRendCloseBtn = $studioRentPopup.find('.close')
     ;
 
     $studioRentBtn.on('click', function () {
         $studioRentPopup[0].style.display = "block";
+    });
+    $studioRendCloseBtn.on('click', function () {
+        $studioRentPopup[0].style.display = "none";
     });
 
     // PHOTO-SESSIONS
@@ -53,7 +57,7 @@ $(document).ready(function () {
         $content = $('#content')
     ;
     $photoSessionBlocks.on('click', function () {
-        var dataToSend = {
+        const dataToSend = {
             block_id: $(this).attr('value'),
         };
         localStorage.setItem('myData', JSON.stringify(dataToSend));

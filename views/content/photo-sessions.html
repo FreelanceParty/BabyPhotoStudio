@@ -5,7 +5,7 @@
         Фотосесії
     </div>
     <div class="photo-sessions-inner">
-        <div class="photo-session-inner-block">
+        <div value="1" class="photo-session-inner-block">
             <div class="photo-session-inner-text">
                 <p>З появою дитини всі батьки мріють набути навичок фотографа, щоб щодня … щогодини фотографувати свого
                     малюка! Адже час так швидко плине, діти ростуть і змінюються неймовірно стрімко. І зберегти у
@@ -15,7 +15,7 @@
                 <img src="/resources/icons/photo_sessions_icons/icon-baby-boy.png" alt="">
             </div>
         </div>
-        <div class="photo-session-inner-block">
+        <div value="2" class="photo-session-inner-block">
             <div class="photo-session-inner-text">
                 <p>Сімейна фотосесія – це фотографії про Вас, про сім'ю, про дітей, про Ваші реальні життєві історії, зі
                     щирими посмішками та емоціями. Зворушливі та щасливі моменти! Переглядаючи свої сімейні фотографії
@@ -26,7 +26,7 @@
                 <img src="/resources/icons/photo_sessions_icons/icon-family.png" alt="">
             </div>
         </div>
-        <div class="photo-session-inner-block">
+        <div value="3" class="photo-session-inner-block">
             <div class="photo-session-inner-text">
                 <p>Подарунок для вас та ваших близьких. Оберіть справді особливий подарунок. Подарунок, який принесе
                     радість, обіцяє приємно проведений час та гарну згадку надовго!</p>
@@ -36,4 +36,20 @@
             </div>
         </div>
     </div>
+    <script>
+        const
+            $photoSessionsContent = $('.photo-sessions-content'),
+            $photoSessionBlocks = $photoSessionsContent.find('.photo-session-inner-block'),
+            $content = $('#content')
+        ;
+        console.log($photoSessionBlocks)
+        $photoSessionBlocks.on('click', function () {
+            const dataToSend = {
+                block_id: $(this).attr('value'),
+            };
+            console.log($(this).attr('value'))
+            localStorage.setItem('myData', JSON.stringify(dataToSend));
+            $content.load('/views/content/photo-sessions/details.html');
+        });
+    </script>
 </div>
