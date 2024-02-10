@@ -1,20 +1,20 @@
 $(document).ready( function () {
-    // PHOTO-ZONE
+    // INTERIOR
     const
-        $photoZone = $('.photo-zones'),
-        $photoZonePopup = $photoZone.find('#photo-zone-popup'),
-        $photoZoneBlock = $photoZone.find('.photo-zone-block'),
-        $closeBtnPhotoZonePopup = $photoZonePopup.find('.close'),
-        $secondaryPhotos = $photoZonePopup.find('img')
+        $interiors = $('.interiors'),
+        $interiorPopup = $interiors.find('#interior-popup'),
+        $interiorBlock = $interiors.find('.interior-block'),
+        $closeBtnInteriorPopup = $interiorPopup.find('.close'),
+        $secondaryPhotos = $interiorPopup.find('img')
     ;
 
-    $photoZoneBlock.on('click', function () {
-        $photoZonePopup[0].style.display = "block";
+    $interiorBlock.on('click', function () {
+        $interiorPopup[0].style.display = "block";
         const topic = $(this).find('input')[0].value
-        $photoZonePopup.find('#expandedImg')[0].src = '/resources/pictures/interiors/' + topic + '/' + topic + '-1.jpg';
-        $photoZonePopup.find('#photo-1')[0].src = '/resources/pictures/interiors/' + topic + '/' + topic + '-1.jpg';
-        $photoZonePopup.find('#photo-2')[0].src = '/resources/pictures/interiors/' + topic + '/' + topic + '-2.jpg';
-        $photoZonePopup.find('#photo-3')[0].src = '/resources/pictures/interiors/' + topic + '/' + topic + '-3.jpg';
+        $interiorPopup.find('#expandedImg')[0].src = '/resources/pictures/interiors/' + topic + '/' + topic + '-1.jpg';
+        $interiorPopup.find('#photo-1')[0].src = '/resources/pictures/interiors/' + topic + '/' + topic + '-1.jpg';
+        $interiorPopup.find('#photo-2')[0].src = '/resources/pictures/interiors/' + topic + '/' + topic + '-2.jpg';
+        $interiorPopup.find('#photo-3')[0].src = '/resources/pictures/interiors/' + topic + '/' + topic + '-3.jpg';
     });
 
     $secondaryPhotos.on('click', function () {
@@ -23,13 +23,13 @@ $(document).ready( function () {
         expandImg.parentElement.style.display = "block";
     });
 
-    $closeBtnPhotoZonePopup.on('click', function () {
-        $photoZonePopup[0].style.display = "none";
+    $closeBtnInteriorPopup.on('click', function () {
+        $interiorPopup[0].style.display = "none";
     });
 
     $(window).on('click', function (event) {
-        if (event.target === $photoZonePopup[0]) {
-            $photoZonePopup[0].style.display = "none";
+        if (event.target === $interiorPopup[0]) {
+            $interiorPopup[0].style.display = "none";
         } else if (event.target === $studioRentPopup[0]) {
             $studioRentPopup[0].style.display = "none";
         }
