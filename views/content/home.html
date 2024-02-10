@@ -38,7 +38,7 @@
             <input name="interior" type="hidden" value="piano">
             <img src="/resources/pictures/interiors/piano/piano-1.JPG" alt="">
             Інтер'єр 1
-            
+
         </div>
         <div class="interior-block">
             <input name="interior" type="hidden" value="love">
@@ -104,8 +104,24 @@
                 <input class="js-phone-number" type="text" placeholder="Введіть номер телефону (обов'язково)">
                 <input class="js-email" type="email" placeholder="Введіть електронну пошту (обов'язково)">
             </div>
+            <div class="radio-checkbox">
+                <div class="radio-circles-cont">
+                    <input class="radio-circles" type="radio" id="answer1" name="serf-type" value="answer1">
+                    <label class="radio-label" for="answer1">Подарнуковий</label>
+                </div>
+                <div class="radio-circles-cont">
+                    <input class="radio-circles" type="radio" id="answer2" name="serf-type" value="answer2">
+                    <label class="radio-label" for="answer2">Сімейна дитяча</label>
+                </div>
+                <div class="radio-circles-cont">
+                    <input class="radio-circles" type="radio" id="answer3" name="serf-type" value="answer3">
+                    <label class="radio-label" for="answer3">В очікувані дива</label>
+                </div>
+            </div>
         </div>
-        <!-- TODO: додати вибір послуги -->
+        <div class="studio-rent-form-fields">
+            <input id="comment" type="text" placeholder="Додаткові побажання">
+        </div>
         <button class="js-studio-rent-btn" onclick="sendMessage()">Відправити заявку</button>
         <script>
             function sendMessage() {
