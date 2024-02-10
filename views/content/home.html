@@ -100,13 +100,35 @@
     <div class="studio-rent-form">
         <div class="studio-rent-form-cont">
             <div class="studio-rent-form-fields">
-                <input type="text" placeholder="Введіть ім'я (обов'язково)">
-                <input type="text" placeholder="Введіть номер телефону (обов'язково)">
-                <input type="email" placeholder="Введіть електронну пошту (обов'язково)">
+                <input class="js-full-name" type="text" placeholder="Введіть ім'я (обов'язково)">
+                <input class="js-phone-number" type="text" placeholder="Введіть номер телефону (обов'язково)">
+                <input class="js-email" type="email" placeholder="Введіть електронну пошту (обов'язково)">
             </div>
         </div>
         <!-- TODO: додати вибір послуги -->
-        <button class="js-studio-rent-btn">Відправити заявку</button>
+        <button class="js-studio-rent-btn" onclick="sendMessage()">Відправити заявку</button>
+        <script>
+            function sendMessage() {
+                const data = {
+                    name: $('.js-full-name').val(),
+                    phone_number: $('.js-phone-number').val(),
+                    email: $('.js-email').val()
+                };
+
+                fetch('http://localhost:3000/sendMessage', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        data,
+                    }),
+                })
+                    .then(response => response.text())
+                    .then(data => console.log(data))
+                    .catch(error => console.error('Error:', error));
+            }
+        </script>
     </div>
     <div id="rent-popup" class="popup"> <!-- TODO: змінити попап -->
         <div class="popup-container">
