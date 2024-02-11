@@ -1,3 +1,7 @@
+.home-container {
+    overflow-x: hidden;
+}
+
 .photo-session-types, .interiors {
     display: flex;
     flex-direction: column;
