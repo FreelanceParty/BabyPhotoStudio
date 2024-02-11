@@ -235,6 +235,8 @@
     white-space: nowrap;
     text-align: center;
     cursor: pointer;
+    transition: .3s;
+
 }
 
 .radio-checkbox label:hover {
@@ -243,16 +245,18 @@
 
 input[type = radio].radio-circles {
     display: none;
+    
 }
 
 input[type = radio].radio-circles:checked + label {
-    background: gold;
+    background: rgb(252, 230, 106);
     border-radius: 5px;
     font-weight: bold;
 }
 input[type = radio].radio-circles:hover + label {
-    background: yellow;
+    background: rgb(255, 255, 148);
     cursor: pointer;
+    transition: .3s;
 }
 
 .radio-circles-cont {
@@ -354,4 +358,16 @@ textarea {
     border-radius: 50%;
     background-color: #fff;
     border: 1px solid #000;
+}
+
+.studio-rent-form-fields input:hover {
+    transition: .5s;
+    scale: 1.05;
+    -webkit-box-shadow: 5px 12px 32px -11px rgba(0,0,0,0.75);
+    -moz-box-shadow: 5px 12px 32px -11px rgba(0,0,0,0.75);
+    box-shadow: 5px 12px 32px -11px rgba(0,0,0,0.75);
+}
+
+.studio-rent-form-fields input{
+    transition: .5s;
 }

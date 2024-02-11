@@ -1,13 +1,39 @@
+
+table{
+    margin: 0 auto;
+    width: 800px;
+	border-collapse: collapse;
+	
+	box-shadow: 4px 8px 30px rgba(0,0,0,0.1);
+    border-radius: 10px;
+   
+}
 #prices-table{
-    display: flex;
-    justify-content: center;
+    overflow: hidden;
 }
-#head-row{
-    background: gold;
+
+th, td {
+	padding: 15px;
+	background-color: rgba(255,255,255,0.2);
+	color: #000000;
 }
-.prices-rows{
-    background: rgba(20,22,17,0.31);
+
+th {
+	text-align: center;
 }
-.prices-column{
-    background: goldenrod;
+
+thead th {
+	 background-color: gold;
 }
+
+tbody tr{
+    transition: .5s;
+}
+
+tbody tr:hover {
+	 transition: .5s;
+		
+			background-color: #fddc70;
+		
+	}
+	
