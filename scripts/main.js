@@ -20,10 +20,7 @@ $(document).ready(function () {
             case 'prices-tab':
                 $content.load('/views/content/prices.html')
                 break;
-            case 'location-tab':
-                $content.load('/views/content/location.html')
-                break;
-            case 'call-me-tab':
+            case 'contacts-tab':
                 $content.load('/views/content/contacts.html')
                 break;
         }

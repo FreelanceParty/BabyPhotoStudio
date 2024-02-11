@@ -234,6 +234,7 @@
     border-radius: 5px;
     white-space: nowrap;
     text-align: center;
+    cursor: pointer;
 }
 
 .radio-checkbox label:hover {
