@@ -19,7 +19,7 @@ body {
     justify-content: space-around;
     padding: 10px 0;
     height: 40px;
-    background: gold;
+    background: #40A2D8;
     z-index: 2;
     box-shadow: 2px 8px 12px 0 rgba(15, 14, 14, 0.475), 2px 10px 24px 0 rgba(0, 0, 0, 0.19);
 }
@@ -73,7 +73,7 @@ input {
 button {
     font-size: 14px;
     color: black;
-    background: gold;
+    background: #40A2D8;
     padding: 10px 20px;
     border-radius: 10px;
     cursor: pointer;

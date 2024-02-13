@@ -253,12 +253,12 @@ input[type = radio].radio-circles {
 }
 
 input[type = radio].radio-circles:checked + label {
-    background: rgb(252, 230, 106);
+    background: #51c2ff;
     border-radius: 5px;
     font-weight: bold;
 }
 input[type = radio].radio-circles:hover + label {
-    background: rgb(255, 255, 148);
+    background: #49bfff;
     cursor: pointer;
     transition: .3s;
 }
