@@ -1,44 +1,39 @@
 
-table{
+table {
     margin: 0 auto;
     width: 800px;
-	border-collapse: collapse;
-	
-	box-shadow: 4px 8px 30px rgba(0,0,0,0.1);
+    border-collapse: collapse;
+
+    box-shadow: 4px 8px 30px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-   
+
 }
-#prices-table{
+
+#prices-table {
     overflow: hidden;
 }
 
 th, td {
-	padding: 15px;
-	background-color: rgba(255,255,255,0.2);
-	color: #000000;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #000000;
 }
 
 th {
-	text-align: center;
-	
+    text-align: center;
 }
-
 
 
 thead th {
-	 background-color: #40A2D8;
-	 
+    background-color: #40A2D8;
 }
 
-tbody tr{
+tbody tr {
     transition: .5s;
 }
 
 tbody tr:hover {
-	 transition: .5s;
-		
-			background-color: #51c1fd;
-		
-		
-	}
+    transition: .5s;
+    background-color: #51c1fd;
+}
 	

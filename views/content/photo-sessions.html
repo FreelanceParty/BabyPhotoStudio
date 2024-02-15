@@ -37,17 +37,15 @@
         </div>
     </div>
     <script>
-        const
+        const // TODO: помилка перезапису
             $photoSessionsContent = $('.photo-sessions-content'),
             $photoSessionBlocks = $photoSessionsContent.find('.photo-session-inner-block'),
             $content = $('#content')
         ;
-        console.log($photoSessionBlocks)
         $photoSessionBlocks.on('click', function () {
             const dataToSend = {
                 block_id: $(this).attr('value'),
             };
-            console.log($(this).attr('value'))
             localStorage.setItem('myData', JSON.stringify(dataToSend));
             $content.load('/views/content/photo-sessions/details.html');
         });

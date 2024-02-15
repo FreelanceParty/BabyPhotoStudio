@@ -226,6 +226,7 @@
     flex-direction: column;
     justify-content: space-around;
 }
+
 .radio-circles-cont {
     display: flex;
     justify-content: center;
@@ -249,7 +250,7 @@
 
 input[type = radio].radio-circles {
     display: none;
-    
+
 }
 
 input[type = radio].radio-circles:checked + label {
@@ -257,8 +258,9 @@ input[type = radio].radio-circles:checked + label {
     border-radius: 5px;
     font-weight: bold;
 }
+
 input[type = radio].radio-circles:hover + label {
-    background: #49bfff;
+    background: #bae6fd;
     cursor: pointer;
     transition: .3s;
 }
@@ -320,7 +322,7 @@ textarea {
 
 .slider-wrapper {
     position: relative;
-    max-width: 70rem;
+    max-width: 70%;
     margin: 0 auto;
 }
 
@@ -367,11 +369,13 @@ textarea {
 .studio-rent-form-fields input:hover {
     transition: .5s;
     scale: 1.05;
-    -webkit-box-shadow: 5px 12px 32px -11px rgba(0,0,0,0.75);
-    -moz-box-shadow: 5px 12px 32px -11px rgba(0,0,0,0.75);
-    box-shadow: 5px 12px 32px -11px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 5px 12px 32px -11px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 5px 12px 32px -11px rgba(0, 0, 0, 0.75);
+    box-shadow: 5px 12px 32px -11px rgba(0, 0, 0, 0.75);
 }
 
-.studio-rent-form-fields input{
+.studio-rent-form-fields input {
     transition: .5s;
 }
+
+/* TODO: посортувати стилі */

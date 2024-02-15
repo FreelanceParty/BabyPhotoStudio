@@ -35,21 +35,6 @@ $(document).ready(function () {
         }
     });
 
-    // STUDIO RENT
-    const
-        $studioRent = $('.studio-rent'),
-        $studioRentBtn = $studioRent.find('.js-studio-rent-btn'),
-        $studioRentPopup = $studioRent.find('#rent-popup'),
-        $studioRendCloseBtn = $studioRentPopup.find('.close')
-    ;
-
-    $studioRentBtn.on('click', function () {
-        $studioRentPopup[0].style.display = "block";
-    });
-    $studioRendCloseBtn.on('click', function () {
-        $studioRentPopup[0].style.display = "none";
-    });
-
     // PHOTO-SESSIONS
     const
         $photoSessionTypesBlock = $('.photo-session-types'),

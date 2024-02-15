@@ -83,10 +83,10 @@
                 </div>
             </div>
         </div>
-        <script src="/scripts/home.js"></script>
     </div>
     <div class="calendar">
-        <div class="calendar-title content-zone-title">Розклад</div> <!-- TODO: стилізувати -->
+        <div class="calendar-title content-zone-title">Розклад</div>
+        <!-- TODO: стилізувати і змінити колір на голубий -->
         <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=2&bgcolor=%23F6BF26&ctz=Europe%2FKiev&title=%D0%97%D0%B0%D0%B3%D0%B0%D0%BB%D1%8C%D0%BD%D0%B8%D0%B9%20%D0%BA%D0%B0%D0%BB%D0%B5%D0%BD%D0%B4%D0%B0%D1%80%20%D0%B7%D0%B0%D0%B9%D0%BD%D1%8F%D1%82%D0%BE%D1%81%D1%82%D1%96%20%D0%A1%D1%82%D1%83%D0%B4%D1%96%D1%97&showPrint=0&showCalendars=0&mode=WEEK&src=ZTE1MGZlMjMyZWY1Mzk2MjlhNTk2ZTg4ZjRkNDdjY2Q4YzZhZjg4YzYwNzU0YTEyNDk1YjdjYzdiNjE4MGJhN0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%23D50000"
                 style="border:solid 1px #777" width="800" height="600" frameborder="0" scrolling="no"></iframe>
     </div>
@@ -125,7 +125,16 @@
             </div>
             <button class="js-studio-rent-btn" onclick="sendMessage()">Відправити заявку</button>
             <script>
+                const
+                    $studioRent = $('.studio-rent'),
+                    $studioRentPopup = $studioRent.find('#rent-popup'),
+                    $studioRendCloseBtn = $studioRentPopup.find('.close')
+                ;
+
                 function sendMessage() {
+                    if (validateFormInputs() > 0) {
+                        return;
+                    }
                     const data = {
                         name: $('.js-full-name').val(),
                         phone_number: $('.js-phone-number').val(),
@@ -146,6 +155,39 @@
                         .then(response => response.text())
                         .then(data => console.log(data))
                         .catch(error => console.error('Error:', error));
+
+                    $studioRentPopup[0].style.display = "block";
+                    $studioRendCloseBtn.on('click', function () {
+                        $studioRentPopup[0].style.display = "none";
+                    });
+                }
+
+                function validateFormInputs() {
+                    const
+                        $nameInput = $studioRent.find('.js-full-name'),
+                        $phoneInput = $studioRent.find('.js-phone-number'),
+                        $emailInput = $studioRent.find('.js-email')
+                    ;
+                    let warnings = 0;
+                    if ($nameInput.val() === '') {
+                        $nameInput.css('background', '#fecaca');
+                        warnings++;
+                    } else {
+                        $nameInput.css('background', '');
+                    }
+                    if ($phoneInput.val === '' || !/^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im.test($phoneInput.val())) {
+                        $phoneInput.css('background', '#fecaca');
+                        warnings++;
+                    } else {
+                        $phoneInput.css('background', '');
+                    }
+                    if ($emailInput.val() === '' || !/\S+@\S+\.\S+/.test($emailInput.val())) {
+                        $emailInput.css('background', '#fecaca');
+                        warnings++;
+                    } else {
+                        $emailInput.css('background', '');
+                    }
+                    return warnings;
                 }
             </script>
         </div>
@@ -160,4 +202,5 @@
             </div>
         </div>
     </div>
+    <script src="/scripts/home.js"></script>
 </div>
