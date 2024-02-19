@@ -9,8 +9,9 @@ $(document).ready(function () {
     ;
 
     $interiorBlock.on('click', function () {
-        $interiorPopup[0].style.display = "block";
-        const topic = $(this).find('input')[0].value
+        $interiorPopup[0].style.display = "flex";
+        $('body').css('overflow-y', 'hidden')
+        const topic = $(this).find('input')[0].value;
         $interiorPopup.find('#expandedImg')[0].src = '/resources/pictures/interiors/' + topic + '/' + topic + '-1.jpg';
         $interiorPopup.find('#photo-1')[0].src = '/resources/pictures/interiors/' + topic + '/' + topic + '-1.jpg';
         $interiorPopup.find('#photo-2')[0].src = '/resources/pictures/interiors/' + topic + '/' + topic + '-2.jpg';
@@ -25,13 +26,16 @@ $(document).ready(function () {
 
     $closeBtnInteriorPopup.on('click', function () {
         $interiorPopup[0].style.display = "none";
+        $('body').css('overflow-y', 'auto')
     });
 
     $(window).on('click', function (event) {
         if (event.target === $interiorPopup[0]) {
             $interiorPopup[0].style.display = "none";
+            $('body').css('overflow-y', 'auto')
         } else if (event.target === $studioRentPopup[0]) {
             $studioRentPopup[0].style.display = "none";
+            $('body').css('overflow-y', 'auto')
         }
     });
 
