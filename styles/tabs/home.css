@@ -53,9 +53,15 @@
     border: 1px solid #000;
 }
 
+.content-container{
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
 .content-zone-title {
     align-self: center;
     font-size: 40px;
+    padding-bottom: 10px;
 }
 
 .photo-session-types, .interiors {
