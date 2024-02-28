@@ -7,16 +7,6 @@
         <div class="photo-zone">
             <div class="main-photo">
             </div>
-            <div class="secondary-photos">
-                <div id="secondary-photo-1" class="photo">
-                </div>
-                <div id="secondary-photo-2" class="photo">
-                </div>
-                <div id="secondary-photo-3" class="photo">
-                </div>
-                <div id="secondary-photo-4" class="photo">
-                </div>
-            </div>
         </div>
         <div class="description">
             <div class="text">
@@ -36,7 +26,7 @@
                 $text = $details.find('.text'),
                 text = {
                     '1': 'В очікуванні дива',
-                    '2': 'Сімейна дитяча',
+                    '2': 'Сімейна фотосесія',
                     '3': 'Подарунковий сертифікат',
                 },
                 prices = {
@@ -55,13 +45,6 @@
             $prices.html(prices[id]);
             $text.html(description[id]);
             $mainPhoto.html(mainPhoto);
-            for (let i = 1; i <= 4; i++) {
-                const
-                    $secondaryPhoto = $details.find(`#secondary-photo-${i}`),
-                    secondaryPhoto = `<img src="/resources/pictures/photo_sessions_photos/secondary/secondary-${id}-${i}.png">`
-                ;
-                $secondaryPhoto.html(secondaryPhoto)
-            }
         });
     </script>
 </div>
