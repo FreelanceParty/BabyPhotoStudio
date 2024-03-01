@@ -8,10 +8,6 @@ body {
     font-family: 'Montserrat', sans-serif;
 }
 
-.console {
-    background: white;
-}
-
 #header {
     position: fixed;
     display: flex;
@@ -55,6 +51,15 @@ body {
     text-decoration: none;
 }
 
+#bg-image {
+    position: fixed;
+    z-index: -1;
+}
+
+#bg-image img {
+    width: 100%;
+}
+
 #content {
     padding-top: 80px;
     display: flex;
@@ -84,6 +89,6 @@ footer {
     justify-content: center;
     color: lightgray;
     height: 10vh;
-    background: #121212 ;
+    background: #121212;
     border-top: 2px solid darkgray;
 }
