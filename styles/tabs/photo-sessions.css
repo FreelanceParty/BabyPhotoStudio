@@ -30,7 +30,6 @@
     cursor: pointer;
     transition: .5s;
     background: white;
-    opacity: 0.95;
 }
 
 .photo-sessions-content .photo-session-inner-block:hover {
