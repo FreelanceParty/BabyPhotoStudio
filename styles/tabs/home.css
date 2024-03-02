@@ -89,6 +89,8 @@
     text-align: center;
     cursor: pointer;
     transition: .5s;
+    background: white;
+    opacity: 0.95;
 }
 
 .photo-session-block:hover {
@@ -182,6 +184,8 @@
     border-radius: 10px;
     padding: 3px 20px;
     transition: .4s;
+    background: white;
+    opacity: 0.95;
 }
 .studio-rent:hover{
     transition: .4s;
